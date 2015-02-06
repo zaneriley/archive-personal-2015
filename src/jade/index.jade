@@ -1,0 +1,69 @@
+//- index.jade
+extends layout/layout.jade        
+
+block content
+  section.about
+    
+  section.case-study.case-study--days-for-girls
+    hgroup
+      h2.client Days for Girls
+      p.intro Days for Girls was outgrowing it’s digital presence and needed a user experience that matched the quality of its services. We rethought the entire experience, designing it from the ground up from sketch to code.
+      p.view-case-study
+        a.btn.btn-primary View Case Study
+
+    .showcase
+
+  section.case-study.case-study--mother-4-game
+    hgroup
+      h2.client MOTHER 4
+      p.intro An indie sequel to an old nintendo game. When your audience is an active, global fanbase, delivering a product has its challenges. When your game is based off an esoteric video game from 1994, even more so.
+      p.view-case-study
+        a.btn.btn-primary View Case Study
+
+    .showcase
+
+    .marble
+      img.lazyload(data-src='img/mother-4-marble.svg', alt='Earth')
+      //- .bottom-gradient
+
+  section.other-work
+    h2 Other Work
+
+    .other-work-item-wrapper
+
+      .other-work-item.one-half
+        .pineapples
+          .view-more.view-more--dribbble
+          
+      .other-work-item.one-fourth
+        .instagram-photo
+          img.lazyload(data-src='img/instagram-photo.jpg', alt='')
+          .view-more.view-more--instagram
+
+      .other-work-item.one-fourth
+        .ness-photo
+          img.lazyload(data-src='http://placehold.it/550x550', alt='')
+          .view-more.view-more--dribbble
+
+
+    .other-work-item-wrapper
+
+      .other-work-item
+        img.lazyload(src='http://placehold.it/550x550', alt='')
+
+      .other-work-item
+        img.lazyload(src='http://placehold.it/550x550', alt='')
+      .other-work-item
+        img.lazyload(src='http://placehold.it/550x550', alt='')
+
+    .other-work-item-wrapper
+      .other-work-item
+        img.lazyload(src='http://placehold.it/550x550', alt='')
+
+    .other-work-item-wrapper
+      .other-work-item
+        img.lazyload(src='http://placehold.it/550x550', alt='')
+      .other-work-item
+        img.lazyload(src='http://placehold.it/550x550', alt='')
+      .other-work-item
+        iframe.sound-cloud-player.lazyload(width='100%', height='450', scrolling='no', frameborder='no', data-src='http://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/183520189&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=true')

@@ -1,0 +1,43 @@
+/* 
+ * 
+ *  SETTINGS - Variables and Mixins
+ *             
+ */
+
+$base-color:#E6E5E0;     // Beige
+$primary-color:#F07060;  // Red
+$accent-color:#4776E6;   // Blue
+$success-color:#ADCE57;  // Green
+$alert-color:#FAD455;    // Yellow
+$note-color:#8E54E9;     // Purple
+$danger-color:#EC962E;   // Orange
+$absolute-color:#fff;    // White
+$main-text:#4776E6;      // Black
+
+
+$font-family:"futura-pt","HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+
+/* 
+ * 
+ *    Media Query Mixin
+ *    
+ *    .foo {
+ *       width: 33.33%;
+ *      @include mq(medium) {
+ *        width: 100%;
+ *       }
+ *     }
+ *             
+ */
+
+@mixin mq($point) {
+  @if $point == small {
+    @media (min-width: 20em) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 48em) { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: 64em)  { @content; }
+  }
+}

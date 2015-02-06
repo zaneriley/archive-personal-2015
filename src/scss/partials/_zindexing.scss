@@ -1,0 +1,31 @@
+/* 
+ * 
+ *
+ *  Z-index positioning
+ *    
+ *         
+ */
+.sticky-wrapper{
+  z-index:2;
+}
+.navigation{
+  z-index:2;
+}
+.navigation-menu-mobile-icon{
+  z-index:2;
+}
+.navigation-mobile-menu-flex-wrapper{
+  z-index:3;
+}
+.navigation-mobile-menu-bg{
+  z-index:1;
+}
+
+.case-study--mother-4-game{
+  & hgroup{
+    z-index:1;
+  }
+  & .marble{
+    z-index:0;
+  }
+}

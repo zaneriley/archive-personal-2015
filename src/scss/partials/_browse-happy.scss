@@ -1,0 +1,42 @@
+/* 
+ * 
+ *
+ *  Browse Happy Notification (for old browsers)
+ *    
+ *         
+ */
+
+ .browse-happy{
+   background-color:$note-color;
+   color:$absolute-color;
+   margin-bottom:0;
+   padding:1em 0;
+   text-align:center;
+    &:after{
+      content:"";
+      display:inline-block;
+      position:absolute;
+      background-image: url("../img/sad-face.gif");
+      background-size:cover;
+      height:2em;
+      width:2em;
+      margin-top:-0.25em;
+    }
+    & a{
+      color:$absolute-color;
+      padding-bottom:0.5em;
+      font-weight:900;
+      &:hover{ 
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0) 90%, $main-text 50%);
+        background-repeat: repeat-x;
+      }
+    }
+ }
+
+
+
+ .browse-happy-emoji{
+   max-width:2.5em;
+   position:absolute;
+   top:0;right:0;
+ }

@@ -1,0 +1,84 @@
+html.no-js
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title Zane Riley's Portfolio
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='css/app.css')
+    //-script(src='javascripts/vendor/modernizr-2.7.1.min.js')
+    //- script
+    //-   | (function(e){var t={kitId:"jnx5fln",scriptTimeout:3e3},n=e.documentElement,r=setTimeout(function(){n.className=n.className.replace(/\bwf-loading\b/g,"")+" wf-inactive"},t.scriptTimeout),i=e.createElement("script"),s=false,o=e.getElementsByTagName("script")[0],u;n.className+=" wf-loading";i.src="//use.typekit.net/"+t.kitId+".js";i.async=true;i.onload=i.onreadystatechange=function(){u=this.readyState;if(s||u&#38;&#38;u!="complete"&#38;&#38;u!="loaded")return;s=true;clearTimeout(r);try{Typekit.load(t)}catch(e){}};o.parentNode.insertBefore(i,o)})(document)
+    script(src="//use.typekit.net/jnx5fln.js")
+    script
+      | try{Typekit.load();}catch(e){}
+
+  body
+
+    <!--[if lt IE 9]>
+    p.browse-happy Your browser is outdated. 
+          | <a href="http://browsehappy.com/">Upgrade your browser</a>
+          | to improve your experience.
+
+    <![endif]-->
+
+    header.navigation
+      h1.navigation-logo Zane Riley
+      
+      nav.navigation-menu
+      
+        ul.navigation-menu-desktop
+          li.navigation-menu-desktop-item
+            a(href='#') About
+          li.navigation-menu-desktop-item
+            a(href='#') Work
+          li.navigation-menu-desktop-item
+            a.btn.btn--primary(href='mailto:zaneriley@gmail.com') Contact
+        
+        .navigation-menu-mobile
+          .navigation-menu-mobile-icon
+            span.menu-mobile-line.menu-mobile-line--top
+            span.menu-mobile-line.menu-mobile-line--middle
+            span.menu-mobile-line.menu-mobile-line--bottom
+            span.menu-mobile-line.menu-mobile-line--x
+            p.navigation-menu-mobile-text MENU
+          
+          .navigation-menu-mobile-bg
+          .navigation-menu-mobile-link-flex-wrapper
+            a.navigation-menu-mobile-link-item About
+            a.navigation-menu-mobile-link-item Work
+            a.navigation-menu-mobile-link-item Contact
+
+    block content
+
+
+    footer
+
+      h3.cta.slide
+            | Let's 
+            span.cta-phrases-wrapper
+              span.cta-phrase.is-visible grab a beer.
+              span.cta-phrase.is-hidden  have tea.
+              span.cta-phrase.is-hidden  meet for coffee.
+              span.cta-phrase.is-hidden  get lunch.
+      
+      a.btn.btn--primary(href='mailto:zaneriley@gmail.com') Let's Talk
+
+      p.love &copy; 2015. Made with 
+        span.surprise .
+        | . Copy freely.
+
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js')
+    //- script window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.11.0.min.js"><\/script>')
+    script(src='js/app.min.js')
+    //-script(src='javascripts/plugins.js')
+    //-script(src='javascripts/script.js')
+    //- Google Analytics: change UA-XXXXX-X to be your site's ID.
+    //- script
+    //-   (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    //-   function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    //-   e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    //-   e.src='//www.google-analytics.com/analytics.js';
+    //-   r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    //-   ga('create','UA-12259734-2');ga('send','pageview');

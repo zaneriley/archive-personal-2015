@@ -1,0 +1,243 @@
+/* 
+ * 
+ *
+ *  Navigation
+ *    
+ *         
+ */
+.navigation{
+  height:5em;
+  width:100%;
+  background-color:$absolute-color;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: center;
+  margin:0;
+  top:0;
+  position: -webkit-sticky;
+  position: fixed; /* future compatibility */
+}
+.navigation.sticky{
+  position:fixed;
+  top:0;
+}
+// Adding padding around direct descendents
+.navigation > *{
+  margin:0 0.75rem;
+}
+
+.navigation-logo{
+  display:inline-block;
+  font-weight:900;
+  font-size: 2em;
+  margin-bottom:0;
+
+}
+
+.navigation-menu, .navigation-menu-desktop, .navigation-menu-mobile{
+  display:inline-block;
+}
+
+.navigation-menu-desktop{
+  display:none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: center;
+  @include mq(medium){
+    display: inline-block;
+  }
+}
+
+.navigation-menu-desktop-item{
+  display:inline-block;
+  font-weight:900;
+  text-transform:uppercase;
+  margin:0 1em;
+}
+
+.navigation-menu-desktop-item:last-child{
+  margin-right:0;
+}
+
+// Adding vertical space to the navigation underlines that appear on :hover
+.navigation-menu-desktop-item a:not(.btn){
+  color:$accent-color;
+  padding:0.5em 0;
+}
+
+
+/*****    NAVIGATION - MOBILE    *****/
+
+.navigation-menu-mobile{
+  display:inline-block;
+  transition:all .2s ease-in-out;
+  top:0;
+  margin:0;
+  @include mq(medium){
+    display:none;
+  }
+}
+
+
+// MOBILE MENU ICON ANIMATION
+.navigation-menu-mobile-icon{
+  width: 3.6em;
+  height:3.25em;
+  cursor: pointer;
+
+  position:relative;
+}
+
+.menu-mobile-line{
+  display: block;
+  position: absolute;
+  border-radius:1em;
+  height: 0.15em;
+  left:0;
+  width: 100%;
+  background: $primary-color;
+  transition: .2s ease-in-out;
+  margin:0;
+}
+
+.menu-mobile-line--top{
+  top:0;
+}
+
+.menu-mobile-line--top.opened{
+  width: 0%;
+  opacity:0;
+  left: 50%;
+  background:$absolute-color;
+}
+
+.menu-mobile-line--middle{
+  top:1em;
+  transform: rotate(0deg);
+}
+
+.menu-mobile-line--middle.opened{
+  transform: rotate(45deg);
+  background:$absolute-color;
+}
+
+.menu-mobile-line--bottom{
+  top:2em;
+}
+
+.menu-mobile-line--bottom.opened{
+  width: 0%;
+  opacity:0;
+  left: 50%;
+  background:$absolute-color;
+}
+
+.navigation-menu-mobile-text{
+  top:2.5em;
+  margin:0;
+}
+
+.menu-mobile-line--x{
+  width:100%;
+  top:1em;
+}
+
+.menu-mobile-line--x.opened{
+  width:100%;
+  transform:rotate(-45deg);
+  background:$absolute-color;
+}
+
+.navigation-menu-mobile-text{
+  color:$primary-color;
+  font-weight:700;
+  letter-spacing:0.2em;
+  margin-bottom:0;
+  position:absolute;
+}
+
+.navigation-menu-mobile-text.opened{
+  color:$absolute-color;
+}
+
+// MOBILE MENU 
+
+// Simply the nav bg color
+.navigation-menu-mobile-bg{
+  background-color:$primary-color;
+  width:.3em;
+  height:0em;
+  margin-top: -1.8em;
+  right: 2.5em;
+  border-radius: 100%;
+  position: fixed;
+  display: block;
+  transform:translate3d(50%,-50%,0); 
+  transform-origin: center center;
+  transition:all .4s ease-in-out;
+}
+
+.navigation-menu-mobile-bg.opened{
+  display:block;
+  transform:translate3d(50%,-50%,0);  
+  width:350%; 
+  height:300%;
+}
+
+// Contains the mobile navigation itself
+.navigation-menu-mobile-link-flex-wrapper{
+  display: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  bottom: 0;
+  left: 0; 
+  right:0;
+  position: fixed;
+  margin: 0 auto;
+  height: 88%;
+  width: 100%;
+  visibility:hidden;
+  display:flex;
+}
+.navigation-menu-mobile-link-flex-wrapper.opened{
+  visibility:visible;
+}
+
+.navigation-menu-mobile-link-item{
+  color:$absolute-color;
+  display:block;
+  text-align:center;
+  font-size:8vmin;
+  text-transform:uppercase;
+  font-weight:800;
+  letter-spacing:0.1em;
+  transform:translateY(-100%);
+  transition:all 0.4s;
+  opacity:0;
+  &:hover{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 90%, $main-text 50%);
+    background-repeat: repeat-x;
+  }
+}
+
+.navigation-menu-mobile-link-item.opened{
+  transform:translateY(0%);
+  opacity:1;
+  &:nth-child(1) {
+    transition-delay:0.0s;
+  }
+  &:nth-child(2) {
+    transition-delay:0.1s;
+  }
+  &:nth-child(3) {
+    transition-delay:0.2s;
+  }
+}

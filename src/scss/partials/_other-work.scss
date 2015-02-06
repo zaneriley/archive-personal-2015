@@ -1,0 +1,53 @@
+.other-work{
+  @include center(100%);
+  @include mq(medium){
+      width:75%;
+  }
+
+  & .one-half{
+    @include span(1);
+    @include mq(medium){
+      @include span(1/2);
+    }
+  }
+
+  & .one-fourth{
+    @include span(1);
+    @include mq(medium){
+      @include span(1/4);
+    }
+  }
+
+  & .one{
+    @include span(1);
+    @include mq(medium){
+      @include span(1);
+    }
+  }
+
+}
+
+.other-work-item{
+  border:1px red solid;
+  display:inline-block;
+  overflow:hidden;
+  position:relative;
+  margin:0;
+  & img,iframe, .other-work-item > *{
+    width:100%;
+  }
+  & .pineapples{
+    background: $primary-color url('../img/pineapple-repeatable.svg');
+    background-repeat:repeat;
+    background-size:50%;
+  }
+  & .view-more{
+    width:100%;
+    height:25%;
+    bottom:0;
+    position:absolute;
+    display:inline-block;
+    content:"";
+    background:$success-color;
+  }
+}
