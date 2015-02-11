@@ -21,6 +21,7 @@ block content
         a.btn.btn-primary View Case Study
 
     .showcase
+      img.browser-window(src='img/browser-window.svg')
 
     .marble
       img.lazyload(data-src='img/mother-4-marble.svg', alt='Earth')
@@ -33,37 +34,55 @@ block content
 
       .other-work-item.one-half
         .pineapples
-          .view-more.view-more--dribbble
+          img.lazyload(data-src='img/pineapples.svg', alt='Pineapples')
+          a.view-more.view-more--dribbble
+            span View on Dribbble
           
       .other-work-item.one-fourth
         .instagram-photo
-          img.lazyload(data-src='img/instagram-photo.jpg', alt='')
-          .view-more.view-more--instagram
+          img.lazyload(data-src='img/instagram-photo.jpg', alt='Instagram Photo')
+          a.view-more.view-more--instagram
 
       .other-work-item.one-fourth
         .ness-photo
-          img.lazyload(data-src='http://placehold.it/550x550', alt='')
-          .view-more.view-more--dribbble
+          img.lazyload(data-src='img/ness.svg', alt='Ness')
+          a.view-more.view-more--dribbble
+            span View on Dribbble
+
+    .other-work-item-wrapper.other-work-item-wrapper--large
+      .one-half
+
+        .other-work-item.happy-halloween
+          img.lazyload(data-src='img/happy-halloween.gif', alt='Bad Party Banner')
+          a.view-more.view-more--codepen
+            span.codepen-icon
+            span 
+
+        .other-work-item
+          
+        .other-work-item.pikachu.one-half
+          img.lazyload(data-src='img/pikachu.svg', alt='Pikachu')
+          a.view-more.view-more--dribbble
+            span View on Dribbble
 
 
-    .other-work-item-wrapper
+      .house-music
 
-      .other-work-item
-        img.lazyload(src='http://placehold.it/550x550', alt='')
+        .other-work-item
+          iframe.lazyload(width='100%', height='100%', scrolling='no', frameborder='no', data-src='http://i.imgur.com/kD1bxxf.gifv#embed')
+          a.view-more.view-more--codepen
 
-      .other-work-item
-        img.lazyload(src='http://placehold.it/550x550', alt='')
-      .other-work-item
-        img.lazyload(src='http://placehold.it/550x550', alt='')
 
-    .other-work-item-wrapper
-      .other-work-item
+    .other-work-item-wrapper.clear-fix
+
+      .other-work-item.one-fourth
         img.lazyload(src='http://placehold.it/550x550', alt='')
 
-    .other-work-item-wrapper
-      .other-work-item
-        img.lazyload(src='http://placehold.it/550x550', alt='')
-      .other-work-item
-        img.lazyload(src='http://placehold.it/550x550', alt='')
-      .other-work-item
-        iframe.sound-cloud-player.lazyload(width='100%', height='450', scrolling='no', frameborder='no', data-src='http://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/183520189&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=true')
+      .other-work-item.one-half
+        img.lazyload(data-src='img/bad-party.gif', title='Bad Party Banner')
+        a.view-more.view-more--dribbble
+          span View on Dribbble
+
+      .other-work-item.one-fourth.soundcloud-player
+        iframe.lazyload(width='100%', height='450', scrolling='no', frameborder='no', data-src='http://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/183520189&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=true')
+        a.view-more.view-more--soundcloud-player

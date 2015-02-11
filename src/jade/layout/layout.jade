@@ -19,11 +19,11 @@ html.no-js
     p.browse-happy Your browser is outdated. 
           | <a href="http://browsehappy.com/">Upgrade your browser</a>
           | to improve your experience.
-
     <![endif]-->
 
     header.navigation
-      h1.navigation-logo Zane Riley
+      h1.navigation-logo
+        a(href='/') Zane Riley
       
       nav.navigation-menu
       
@@ -53,16 +53,19 @@ html.no-js
 
 
     footer
+      .contact-information
+        .email-me
+          h3.cta.slide
+                | Let's 
+                span.cta-phrases-wrapper
+                  span.cta-phrase.is-visible grab a beer.
+                  span.cta-phrase.is-hidden  have tea.
+                  span.cta-phrase.is-hidden  meet for coffee.
+                  span.cta-phrase.is-hidden  get lunch.
+          
+          a.btn.btn--primary(href='mailto:zaneriley@gmail.com') hello@zaneriley.com
 
-      h3.cta.slide
-            | Let's 
-            span.cta-phrases-wrapper
-              span.cta-phrase.is-visible grab a beer.
-              span.cta-phrase.is-hidden  have tea.
-              span.cta-phrase.is-hidden  meet for coffee.
-              span.cta-phrase.is-hidden  get lunch.
-      
-      a.btn.btn--primary(href='mailto:zaneriley@gmail.com') Let's Talk
+        .social-links
 
       p.love &copy; 2015. Made with 
         span.surprise .

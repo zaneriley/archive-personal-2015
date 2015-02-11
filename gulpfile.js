@@ -41,6 +41,7 @@ gulp.task('js', function() {
          gulp.src('src/js/footer-animation.js'),
          gulp.src('src/js/sticky-navigation.js'),
          gulp.src('src/js/lazysizes.js'),
+         gulp.src('src/js/lazysizes-config.js'),
          gulp.src('src/js/*.js')
     .pipe( uglify() )
     .pipe( concat('app.min.js'))

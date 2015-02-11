@@ -34,7 +34,12 @@
   font-weight:900;
   font-size: 2em;
   margin-bottom:0;
-
+  & a{
+    color:$main-text;
+    &:hover{
+      background-image:none;
+    }
+  }
 }
 
 .navigation-menu, .navigation-menu-desktop, .navigation-menu-mobile{
@@ -221,6 +226,8 @@
   letter-spacing:0.1em;
   transform:translateY(-100%);
   transition:all 0.4s;
+  margin:0;
+  padding:0.5em 0;
   opacity:0;
   &:hover{
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 90%, $main-text 50%);

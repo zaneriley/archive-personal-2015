@@ -8,24 +8,31 @@
 
 .case-study{
   min-height:25rem;
+  width:100%;
   position:relative;
   color:$absolute-color;
   margin:0;
   display:inline-block;
     & hgroup {
-      @include center(80%);
+      @include center(100%);
+      margin:0 0.75em;
+      @include mq(medium){
+        width:80%;
+        margin:0 auto;
+      }
       position:relative;
       & .client{
-        font-size:9vmax;
+        font-size:8vmax;
         @include mq(medium){
           font-size:5em;
         }
         text-align:center;
       }
       & .intro{
-        font-size:1.5em;
+        font-size:1.25em;
         @include mq(medium){
-          width:70%;          
+          width:70%;
+          font-size:1.5em;        
         }
       }
       & .view-case-study{
@@ -50,6 +57,10 @@
 .case-study--mother-4-game{
   background-color:$primary-color;
   overflow:hidden;
+  & .showcase{
+    @include center(50%);
+    position:relative;
+  }
   & .marble{
     position:absolute;
     right:0;bottom:0%;left:0;
@@ -58,7 +69,6 @@
     margin:0 auto;
     @include mq(medium){
       bottom:-25%;
-      width:75%;
     }
       & img{
         width:100%;

@@ -1,53 +1,117 @@
 .other-work{
   @include center(100%);
-  @include mq(medium){
-      width:75%;
+  margin-top:0;
+    @include mq(medium){
+        width:45em;
+    }
+    @include mq(large){
+        width:65em;
+    }
+  
+  & .one-half, .one-fourth, .one{
+    @include span(1);
+    margin-top:0;
   }
 
   & .one-half{
-    @include span(1);
     @include mq(medium){
       @include span(1/2);
     }
   }
 
   & .one-fourth{
-    @include span(1);
     @include mq(medium){
       @include span(1/4);
     }
   }
 
   & .one{
-    @include span(1);
     @include mq(medium){
       @include span(1);
     }
   }
 
+  & .clear-fix{
+    clear:both;
+  }
+
+  & .lazyloaded{
+    opacity:1;
+  }
+}
+
+.other-work-item-wrapper{
+  position:relative;
+  overflow:hidden;
+  margin-top:0;
+  & .pineapples{
+    background-color:$primary-color;
+  }
+  & .pikachu{
+    background-color:#4167B1;
+  }
+
+  & .soundcloud-player{
+    position:absolute;
+    right:0;
+    height:100%;
+    background-color:#3F2133;
+    & iframe{
+      height:100%;
+    }
+  }
+
+  & .house-music {
+
+    @include mq(medium){
+      position:absolute;
+      right:0;
+      margin-top:0;
+      width:50%;
+      height:100%;
+    }
+    
+    & .other-work-item, .lazyload{
+      height:100%;
+      width:100%;
+      margin-top:0;
+    }
+  }
+
+}
+.other-work-item-wrapper--large{
+  position:relative;
 }
 
 .other-work-item{
-  border:1px red solid;
   display:inline-block;
   overflow:hidden;
   position:relative;
   margin:0;
-  & img,iframe, .other-work-item > *{
+  cursor:pointer;
+  & img,iframe,video, .other-work-item > *{
     width:100%;
-  }
-  & .pineapples{
-    background: $primary-color url('../img/pineapple-repeatable.svg');
-    background-repeat:repeat;
-    background-size:50%;
+
   }
   & .view-more{
     width:100%;
-    height:25%;
+    height:0%;
     bottom:0;
+    left:0;
     position:absolute;
     display:inline-block;
     content:"";
-    background:$success-color;
+    opacity:1;
+    background-image:none;
+    color:$absolute-color;
+    font-size:1.25em;
+    margin:0;
+    @include mq(medium){
+      font-size:3vw;
+    }
+
+  }
+  & .view-more--dribbble{
+    background-color:$note-color;
   }
 }

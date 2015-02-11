@@ -1,0 +1,3 @@
+window.lazySizesConfig = {
+    addClasses: true
+};
