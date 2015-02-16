@@ -12,11 +12,11 @@ $alert-color:#FAD455;    // Yellow
 $note-color:#8E54E9;     // Purple
 $danger-color:#EC962E;   // Orange
 $absolute-color:#fff;    // White
-$main-text:#4776E6;      // Black
+$main-text:#020736;      // Black
 
 
-$font-family:"futura-pt","HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-
+$sans-serif-font-family:"futura-pt","HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+// $serif-font-family:"adobe-caslon-pro", "Adobe Garamond Pro", Georgia, Constantia, serif;
 /* 
  * 
  *    Media Query Mixin
@@ -32,12 +32,12 @@ $font-family:"futura-pt","HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman"
 
 @mixin mq($point) {
   @if $point == small {
-    @media (min-width: 20em) { @content; }
+    @media (min-width: 20em) { @content; } //320px
   }
   @else if $point == medium {
-    @media (min-width: 48em) { @content; }
+    @media (min-width: 48em) { @content; } //768px
   }
   @else if $point == large {
-    @media (min-width: 54em)  { @content; }
+    @media (min-width: 54em)  { @content; } //864px
   }
 }

@@ -40,6 +40,7 @@ gulp.task('js', function() {
   return gulp.src('src/js/mobile-menu-icon.js'),
          gulp.src('src/js/footer-animation.js'),
          gulp.src('src/js/sticky-navigation.js'),
+         gulp.src('src/js/lazysizes-responsive-images.js'),
          gulp.src('src/js/lazysizes.js'),
          gulp.src('src/js/lazysizes-config.js'),
          gulp.src('src/js/*.js')
@@ -55,7 +56,7 @@ gulp.task('templates', function() {
     .pipe( gulp.dest('dist/'))
     .pipe(reload({stream:true}));
 });
- 
+
 gulp.task('express', function() {
   app.use(require('connect-livereload')());
   app.use(express.static(path.resolve('./dist')));

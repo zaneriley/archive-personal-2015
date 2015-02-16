@@ -7,32 +7,31 @@
  */
 
 .case-study{
-  min-height:25rem;
   width:100%;
   position:relative;
   color:$absolute-color;
   margin:0;
   display:inline-block;
+
     & hgroup {
-      @include center(100%);
-      margin:0 0.75em;
+      max-width:43em;
+      margin:0 1em;
       @include mq(medium){
-        width:80%;
+        
         margin:0 auto;
       }
       position:relative;
       & .client{
         font-size:8vmax;
+        margin-top:1.3rem;
         @include mq(medium){
           font-size:5em;
         }
         text-align:center;
       }
       & .intro{
-        font-size:1.25em;
         @include mq(medium){
-          width:70%;
-          font-size:1.5em;        
+          max-width:45em;      
         }
       }
       & .view-case-study{
@@ -43,23 +42,64 @@
     & .btn-primary{
     border-color:$absolute-color;
     color:$absolute-color;
-
       &:hover{
       background-color:$absolute-color;
+      }
+    }
+
+    .browser-window{
+      background-color:$base-color;
+      max-width:45em;
+      margin-left:auto;
+      margin-right:auto;
+      padding: 0 1em;
+      position:relative;
+      background-clip:content-box;
+      & img{
+        width:55%;
       }
     }
 }
 
 .case-study--days-for-girls{
-  background-color:$alert-color;
+  background-color:$danger-color;
+  color:$absolute-color;
+  overflow:hidden;
+  &:after{
+      background-image:url('../img/days-for-girls-bg.svg');
+      background-repeat:repeat;
+      opacity: 0.05;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;   
+      content:"";
+      display:block;
+      height:100%;
+      overflow:hidden;
+  }
 }
 
 .case-study--mother-4-game{
   background-color:$primary-color;
   overflow:hidden;
   & .showcase{
-    @include center(50%);
+    height:12em;
+    margin:0 auto;
+    max-width: 45em;
+    overflow:scroll;
+    padding:0 1em;
     position:relative;
+    @include mq(medium){
+      height:15em;
+    }
+    & .mother-4-website{
+      position:relative;
+      margin:0;
+      width:100%;
+    }
   }
   & .marble{
     position:absolute;
@@ -67,9 +107,9 @@
     width:100%;
     display:block;
     margin:0 auto;
-    @include mq(medium){
-      bottom:-25%;
-    }
+      @include mq(medium){
+        bottom:-25%;
+      }
       & img{
         width:100%;
         opacity:0.2;

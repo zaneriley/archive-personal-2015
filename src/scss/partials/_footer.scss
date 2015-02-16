@@ -17,15 +17,24 @@ footer{
   justify-content: space-around;
   align-content: space-around;
   align-items: stretch;
+  
   & > * {
     margin:0;
-    padding:0em 0.75em;
+    padding:0em 1em;
+  }
+
+  & .contact-information{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: flex-start;
   }
 } 
 
 .email-me{
   & a{
-    margin-top:0;
     & :hover{
         background-image: none;
     }
@@ -72,46 +81,18 @@ footer{
 
 .love{
   text-align:center;
+  font-size:1rem;
 }
 
 /* Heart Icon */
 .surprise {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  text-indent: -9999px;
-  font-size:0.5em;
-  width: 2.25em;
-  height: 2.25em;
-  transform: rotate(45deg) scale(1);
+  transform: scale(1);
   transform-origin: center center;
-  margin:-1em 0.5em;
-  top:-1em;
-
+  color:$primary-color;
 }
+
 .surprise:hover{
   animation: heartbeat 1250ms linear infinite both;
-  transform: rotate(45deg) scale(1);
+  transform: scale(1);
   cursor:pointer;
-}
-.surprise:after, .surprise:before {
-  position: absolute;
-  content: "";
-  background: $primary-color;
-}
-.surprise:not(:required):before {
-  border-top-left-radius: .85em;
-  border-bottom-left-radius: .85em;
-  top: 0.75em;
-  left: 0;
-  width: 2.25em;
-  height: 1.5em;
-}
-.surprise:not(:required):after {
-  border-top-left-radius: .75em;
-  border-top-right-radius: .75em;
-  top: .5px;
-  left: .76em;
-  width: 1.5em;
-  height: .75em;
 }
