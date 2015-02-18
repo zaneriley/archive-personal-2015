@@ -17,3 +17,7 @@ Thumbs.db
 # NPM Modules #
 ###############
 node_modules
+
+# Components #
+##############
+bower_components
