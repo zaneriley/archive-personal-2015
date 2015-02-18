@@ -7,17 +7,24 @@
  */
 
 .case-study{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width:100%;
+  height:80%;
   position:relative;
   color:$absolute-color;
   margin:0;
-  display:inline-block;
-
-    & hgroup {
+    & .case-study-information {
       max-width:43em;
       margin:0 1em;
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
       @include mq(medium){
-        
         margin:0 auto;
       }
       position:relative;
@@ -80,11 +87,24 @@
       height:100%;
       overflow:hidden;
   }
+  & .btn:hover{
+      color:$danger-color;
+  }
+  & .logo{
+    width:100%;
+    max-width:30em;
+    margin:0 auto;
+    display:block;
+  }
 }
 
 .case-study--mother-4-game{
   background-color:$primary-color;
   overflow:hidden;
+  & .logo{
+    width:100%;
+    margin:0 auto;
+  }
   & .showcase{
     height:12em;
     margin:0 auto;
@@ -124,6 +144,9 @@
         display: block;
         height: 100%;
       }
+  }
+  & .btn:hover{
+    color:$primary-color;
   }
 }
 

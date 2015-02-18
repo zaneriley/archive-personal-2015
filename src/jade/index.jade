@@ -3,13 +3,15 @@ extends layout/layout.jade
 
 block content
   section.about
-    h2 Hello
-    h3 Blue Bottle Carles
-    p XOXO crucifix mixtape. Fingerstache 3 wolf moon dreamcatcher, art party Echo Park Intelligentsia Etsy cronut sriracha flexitarian polaroid selvage. Bespoke paleo +1, meditation keffiyeh quinoa authentic chillwave Blue Bottle bitters mlkshk cold-pressed flexitarian whatever. 
-    
+
+    h1 Zane Riley
+    h3 User Experience - Frontend Development - Product Design
+    p I make products easier to use and help businesses communicate more effectively. My favorite color is #11cb77.
+
   section.case-study.case-study--days-for-girls
-    hgroup
-      h2.client Days for Girls
+    .case-study-information
+      //- h2.client Days for Girls
+      img.logo(src="img/days-for-girls-logo.svg", alt="Days for Girls International")
       p.intro Days for Girls was outgrowing it’s digital presence and needed a user experience that matched the quality of its services. We rethought the entire experience, designing it from the ground up from sketch to code.
       p.view-case-study
         a.btn.btn-primary View Case Study
@@ -17,24 +19,24 @@ block content
     .showcase
 
   section.case-study.case-study--mother-4-game
-    hgroup
-      h2.client MOTHER 4
+    .case-study-information
+      //- h2.client MOTHER 4
+      img.logo(src="http://mother4game.com/img/logo.svg", alt="Mother 4 Game")
       p.intro An indie sequel to an old nintendo game. When your audience is an active, global fanbase, delivering a product has its challenges. When your game is based off an esoteric video game from 1994, even more so.
       p.view-case-study
         a.btn.btn-primary View Case Study
 
     
-    .browser-window
-      img(src='img/browser-window.svg')
-    .showcase
-      img.mother-4-website(data-sizes='auto', src='img/mother-4-game-website-256w.png', data-srcset='img/mother-4-game-website-256w.png 256w, img/mother-4-game-website-512w.png 512w, img/mother-4-game-website-1024w.png 1024w, img/mother-4-game-website-1440.png 1440w')
+    //- .browser-window
+    //-   img(src='img/browser-window.svg')
+    //- .showcase
+    //-   img.mother-4-website(data-sizes='auto', src='img/mother-4-game-website-256w.png', data-srcset='img/mother-4-game-website-256w.png 256w, img/mother-4-game-website-512w.png 512w, img/mother-4-game-website-1024w.png 1024w, img/mother-4-game-website-1440.png 1440w')
 
     .marble
       img.lazyload(data-src='img/mother-4-marble.svg', alt='Earth')
       //- .bottom-gradient
 
   section.other-work
-    h2 Other Work
 
     .other-work-item-wrapper
 
@@ -42,53 +44,75 @@ block content
         .pineapples
           img.lazyload(data-src='img/pineapples.svg', alt='Pineapples')
           a.view-more.view-more--dribbble
-            span View on Dribbble
+            .view-more-description 
+              span.icon-dribbble 
+              span View on Dribbble
           
       .other-work-item.one-fourth
         .instagram-photo
           img.lazyload(data-src='img/instagram-photo.jpg', alt='Instagram Photo')
-          a.view-more.view-more--instagram
+          a.view-more.view-more--instagram(href='http://instagram.com/p/s5BZOhiIJe/', target='_blank')
+            .view-more-description 
+              span.icon-instagram
+              span View on Instagram
 
       .other-work-item.one-fourth
         .ness-photo
           img.lazyload(data-src='img/ness.svg', alt='Ness')
           a.view-more.view-more--dribbble
-            span View on Dribbble
+            .view-more-description 
+              span.icon-dribbble 
+              span View on Dribbble
 
     .other-work-item-wrapper.other-work-item-wrapper--large
       .one-half
 
         .other-work-item.happy-halloween
           img.lazyload(data-src='img/happy-halloween.gif', alt='Bad Party Banner')
-          a.view-more.view-more--codepen
-            span.codepen-icon
-            span 
+          a.view-more.view-more--codepen(href='http://codepen.io/zaneriley/pen/zLhBE', target='_blank')
+            .view-more-description 
+              span.icon-codepen
+              span View on Codepen
 
-        .other-work-item
-          
         .other-work-item.pikachu.one-half
           img.lazyload(data-src='img/pikachu.svg', alt='Pikachu')
-          a.view-more.view-more--dribbble
-            span View on Dribbble
+          a.view-more.view-more--dribbble(href='http://codepen.io/zaneriley/pen/zLhBE', target='_blank')
+            .view-more-description 
+              span.icon-dribbble 
+              span View on Dribbble
 
+        .other-work-item.one-half
+          img.lazyload(data-sizes='auto', src='img/project-timeline-256w.png', data-srcset='img/project-timeline-256w.png 256w, img/project-timeline-512w.png 512w, img/project-timeline-1024w.png 1024w, img/project-timeline-1440w.png 1440w')
+          a.view-more.view-more--github(href='http://github.com/zaneriley/project-timeline', target='_blank')
+            .view-more-description
+              span.icon-github
+              span View on Github 
 
       .house-music
 
         .other-work-item
-          iframe.lazyload(width='100%', height='100%', scrolling='no', frameborder='no', data-src='http://i.imgur.com/kD1bxxf.gifv#embed')
-          a.view-more.view-more--codepen
+          iframe.lazyload(width='100%', height='100%', scrolling='no', frameborder='no', data-src='http://i.imgur.com/kD1bxxf.gifv#embed', alt="Phone Number Form Design")
+          a.view-more.view-more--codepen(href='http://codepen.io/zaneriley/pen/LfrCu', target='_blank')
+            .view-more-description 
+              span.icon-codepen
+              span View on Codepen
 
 
     .other-work-item-wrapper.clear-fix
 
       .other-work-item.one-fourth
-        img.lazyload(src='http://placehold.it/550x550', alt='')
+        img.lazyload(data-src='img/punks-1024w.jpg', alt='Punks at Punk Rock Bowling 2013')
+        a.view-more.view-more--instagram(href='http://instagram.com/p/ZzG_fwCIIv/', target='_blank')
+          .view-more-description 
+            span.icon-instagram
+            span View on Instagram
 
       .other-work-item.one-half
         img.lazyload(data-src='img/bad-party.gif', title='Bad Party Banner')
         a.view-more.view-more--dribbble
-          span View on Dribbble
+          .view-more-description
+              span.icon-dribbble 
+              span View on Dribbble
 
       .other-work-item.one-fourth.soundcloud-player
-        iframe.lazyload(width='100%', height='450', scrolling='no', frameborder='no', data-src='http://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/183520189&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=true')
-        a.view-more.view-more--soundcloud-player
+        iframe.lazyload(width='100%', height='400', scrolling='no', frameborder='no', data-src='http://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/183520189&color=F07060&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&visual=true')

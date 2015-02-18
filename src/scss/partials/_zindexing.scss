@@ -24,7 +24,7 @@
 
 .case-study{
   z-index:0;
-  & hgroup{
+  & .case-study-information{
     z-index:1;
   }
   & .showcase, .browser-window{
@@ -32,5 +32,15 @@
   }
   & .marble{
     z-index:0;
+  }
+}
+
+.view-more{
+  z-index:1;
+  & .view-more-description{
+    z-index:1;
+  }
+  &:after{
+    z-index:-1;
   }
 }

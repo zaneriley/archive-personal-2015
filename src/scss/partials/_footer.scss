@@ -8,7 +8,7 @@
 
 footer{
   position:relative;
-  min-height:12em;
+  min-height:15em;
   width:100%;
   background:$absolute-color;
   display: flex;
@@ -24,22 +24,13 @@ footer{
   }
 
   & .contact-information{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-content: stretch;
-  align-items: flex-start;
+  display: block;
+  text-align:center;
+  width:100%;
+  padding:0 ms(0);
   }
-} 
 
-.email-me{
-  & a{
-    & :hover{
-        background-image: none;
-    }
-  }
-}
+} 
 
 /* Footer Call to Action */
 .cta.slide span {
@@ -96,3 +87,30 @@ footer{
   transform: scale(1);
   cursor:pointer;
 }
+
+
+
+// .social-links{
+//   position:absolute;
+//   left:0;
+//   bottom:0;
+//   right:0;
+//   padding:0;
+//   margin:0 auto;
+//   text-align:center;
+//   & a{
+//     position:relative;
+//     display:inline-block;
+//     content:"";
+//     color:$absolute-color;
+//     background-color:$primary-color;
+//     margin:0;
+//     border-radius:100%;
+//     padding:ms(-1);
+//     font-size:ms(1);
+//     @include mq(medium){
+//     }
+//     & span{
+//     }
+//   }
+// }
