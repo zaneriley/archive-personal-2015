@@ -1,5 +1,5 @@
 .other-work{
-  margin:ms(2) auto;
+  margin:ms(4) auto;
   @include center(100%);
     @include mq(medium){
         width:431em;
@@ -101,8 +101,14 @@
   }
 }
 
-.other-work-item:hover img{
-  transform: scale(1.01);
+.other-work-item:hover{
+  & img{ 
+    transform: scale(1.01);
+  }
+  & .view-more-description {
+    transform:translateY(0%);
+    opacity:1;
+  }
 }
 
 .view-more{
@@ -137,6 +143,9 @@
     text-align:center;
     margin:0 auto;
     font-size:1.25em;
+    transform:translateY(50%);
+    opacity:0;
+    transition:all .4s ease-in-out;
     & [class^="icon-"], [class*=" icon-"]{
       padding-right:0.25em;
     }

@@ -71,6 +71,9 @@ a:hover{
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 90%, $primary-color 10%);
   background-repeat: repeat-x;
 }
+.nowrap{
+  white-space: nowrap;
+}
 
 .btn{
   display:inline-block;
@@ -88,3 +91,6 @@ a:hover{
   color:$absolute-color;
 }
 
+.row{
+  max-width:$max-width;
+}

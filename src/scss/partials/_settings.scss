@@ -12,8 +12,10 @@ $alert-color:#FAD455;    // Yellow
 $note-color:#8E54E9;     // Purple
 $danger-color:#EC962E;   // Orange
 $absolute-color:#fff;    // White
-$main-text:#020736;      // Black
+$main-text:rgba(2,7,54,0.86);      // Black
+$sub-text:rgba(2,7,54,0.50);
 
+$max-width:45em;
 
 $sans-serif-font-family:"futura-pt","HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
 // $serif-font-family:"adobe-caslon-pro", "Adobe Garamond Pro", Georgia, Constantia, serif;

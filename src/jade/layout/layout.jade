@@ -29,9 +29,9 @@ html.no-js
       
         ul.navigation-menu-desktop
           li.navigation-menu-desktop-item
-            a(href='#') About
+            a(href='/about.html') About
           li.navigation-menu-desktop-item
-            a(href='#') Work
+            a(href='/') Work
           li.navigation-menu-desktop-item
             a.btn.btn--primary(href='mailto:zaneriley@gmail.com') Contact
         
@@ -45,9 +45,23 @@ html.no-js
           
           .navigation-menu-mobile-bg
           .navigation-menu-mobile-link-flex-wrapper
-            a.navigation-menu-mobile-link-item About
-            a.navigation-menu-mobile-link-item Work
-            a.navigation-menu-mobile-link-item Contact
+            a.navigation-menu-mobile-link-item(href='/about') About
+            a.navigation-menu-mobile-link-item(href='/') Work
+            a.navigation-menu-mobile-link-item(href='mailto:hello@zaneriley.com') Contact
+            span.navigation-menu-mobile-link-item.social-links
+                a(href='http://twitter.com/zaneriley',target='_blank')
+                  span.icon-twitter 
+                a(href='http://github.com/zaneriley',target='_blank')
+                  span.icon-github 
+                a(href='http://codepen.io/zaneriley',target='_blank')
+                  span.icon-codepen 
+                a(href='http://dribbble.com/zaneriley',target='_blank')
+                  span.icon-dribbble 
+                a(href='http://instagram.com/zaneriley',target='_blank')
+                  span.icon-instagram 
+                a(href='http://soundcloud.com/zaneriley',target='_blank')
+                  span.icon-soundcloud 
+
 
     block content
 
@@ -59,14 +73,14 @@ html.no-js
                 span.cta-phrases-wrapper
                   span.cta-phrase.is-visible grab a beer.
                   span.cta-phrase.is-hidden  have tea.
-                  span.cta-phrase.is-hidden  meet for coffee.
                   span.cta-phrase.is-hidden  get lunch.
           
             a.btn.btn--primary(href='mailto:zaneriley@gmail.com') hello@zaneriley.com
         
           p.love Made with 
             span.icon-heart.surprise
-            |  in 2015. Rural midwest  ✈ San Francisco.
+            |  in 2015. 
+            span.nowrap Rural midwest  ✈ San Francisco.
     
       //- .social-links
       //-   a(href='http://twitter.com/zaneriley',target='_blank')

@@ -2,27 +2,30 @@
 extends layout/layout.jade        
 
 block content
-  section.about
-
-    h1 Zane Riley
-    h3 User Experience - Frontend Development - Product Design
-    p I make products easier to use and help businesses communicate more effectively. My favorite color is #11cb77.
+  section.introduction-wrapper
+    .introduction-text
+      h1 Hello. My name is Zane.
+      h3 
+        span.nowrap User Experience 
+        | - 
+        span.nowrap Product Design
+      p I make products easier to use and help businesses communicate more effectively. I always cook bulgogi for dinner parties.
 
   section.case-study.case-study--days-for-girls
     .case-study-information
       //- h2.client Days for Girls
       img.logo(src="img/days-for-girls-logo.svg", alt="Days for Girls International")
-      p.intro Days for Girls was outgrowing it’s digital presence and needed a user experience that matched the quality of its services. We rethought the entire experience, designing it from the ground up from sketch to code.
+      p.intr
+        | Days for Girls provides girls around the world with sustainable female hygiene and health education. Facing tremendous growth, Days for Girls needed an online experience to match its programs. We rethought the entire process from sketch to code.
       p.view-case-study
         a.btn.btn-primary View Case Study
-
-    .showcase
 
   section.case-study.case-study--mother-4-game
     .case-study-information
       //- h2.client MOTHER 4
       img.logo(src="http://mother4game.com/img/logo.svg", alt="Mother 4 Game")
-      p.intro An indie sequel to an old nintendo game. When your audience is an active, global fanbase, delivering a product has its challenges. When your game is based off an esoteric video game from 1994, even more so.
+      p.intro 
+        | An indie sequel to the cult-classic video game series, Mother. Developed over two years, the title is slated for release in summer 2015 to an active, global fanbase. 
       p.view-case-study
         a.btn.btn-primary View Case Study
 

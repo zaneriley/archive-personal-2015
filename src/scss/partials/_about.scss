@@ -1,5 +1,57 @@
-.about{
-  margin:6.3em auto 1.3em auto;
-  padding:0 1em;
-  max-width:45em;
+.introduction-wrapper{
+  padding:8.16049em ms(0) ms(4) ms(0);
+  // background-color:$accent-color;
+  // color:$absolute-color;
+  & .introduction-text{
+    max-width:$max-width;
+    margin:0 auto;
+    & h1{
+      text-align:center;
+      color:$primary-color;
+    }
+    & h3{
+      text-transform:uppercase;
+      text-align:center;
+      font-size:ms(1);
+    }
+    p {
+      font-size:ms(1);
+    }
+  }
+}
+
+// About page photo header
+.profile-photo{
+  position:relative;
+  margin-top:5em;
+  width:100%;
+  overflow:hidden;
+  & video{
+    display:none;
+    position: absolute; 
+    right: 0; 
+    bottom: 0;
+    margin-top:0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: 100%; 
+    height: auto; 
+    background: url(polina.jpg) no-repeat;
+    background-size: cover; 
+    @include mq(medium){
+      display:block;
+    } 
+  }
+  & img{
+    width:100%;
+    margin:0;
+  }
+}
+
+.about-me{
+  max-width:$max-width;
+  margin:0 ms(0);
+  @include mq(medium){
+    margin:0 auto;
+  }
 }
