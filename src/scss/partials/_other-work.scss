@@ -1,5 +1,6 @@
 .other-work{
   margin:ms(4) auto;
+  transform:translate3d();
   @include center(100%);
     @include mq(medium){
         width:431em;
@@ -29,8 +30,14 @@
   & .clear-fix{
     clear:both;
   }
-  & .lazyloaded{
-    opacity:1;
+  h2 {
+    margin-bottom:1.333rem;
+    margin-left:ms(0);
+    margin-right:ms(0);
+    @include mq(medium){
+      margin-left:0;
+      margin-right:0;
+    }
   }
 }
 
@@ -47,7 +54,6 @@
   & .soundcloud-player{
     position:relative;
     right:0;
-    
     background-color:#3F2133;
     & iframe{
       @include mq(medium){
@@ -61,10 +67,12 @@
   }
   & .happy-halloween{
       width:100%;
+      background-color:#170535;
   }
 
   & .house-music {
     display:none;
+    background-color:$accent-color;
     @include mq(medium){
       display:block;
       position:absolute;
@@ -73,14 +81,23 @@
       width:50%;
       height:100%;
     }
-    & .other-work-item, .lazyload{
+    & .other-work-item, .lazyload, img{
       height:100%;
       width:100%;
       margin-top:0;
     }
   }
 
+  & .ness-photo{
+      background-color:rgb(107, 196, 160);
+  }
+
+  & .instagram-photo{
+      background-color:#627CAF;
+  }
+
 }
+
 .other-work-item-wrapper--large{
   position:relative;
 }
@@ -93,11 +110,11 @@
   cursor:pointer;
   & img,iframe,video, .other-work-item > *{
     width:100%;
-    
   }
   & img{
     transform:scale(1);
     transition:transform .4s ease-in-out;
+    margin-top:0;
   }
 }
 
@@ -146,7 +163,7 @@
     transform:translateY(50%);
     opacity:0;
     transition:all .4s ease-in-out;
-    & [class^="icon-"], [class*=" icon-"]{
+    & [class^='icon-'], [class*=' icon-']{
       padding-right:0.25em;
     }
   }

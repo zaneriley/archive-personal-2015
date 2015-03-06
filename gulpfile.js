@@ -37,23 +37,26 @@ gulp.task('css', function() {
 });
  
 gulp.task('js', function() {
-  return gulp.src('src/js/mobile-menu-icon.js'),
-         gulp.src('src/js/footer-animation.js'),
+  return gulp.src('src/js/footer-animation.js'),
          gulp.src('src/js/sticky-navigation.js'),
          gulp.src('src/js/lazysizes-responsive-images.js'),
          gulp.src('src/js/lazysizes.js'),
          gulp.src('src/js/lazysizes-config.js'),
+         gulp.src('src/js/skrollr.js'),
+         gulp.src('src/smoothState.js'),
+         gulp.src('src/js/mobile-menu-icon.js'),
+         gulp.src('src/js/final-touches.js'),
          gulp.src('src/js/*.js')
-    .pipe( uglify() )
+    // .pipe( uglify() )
     .pipe( concat('app.min.js'))
     .pipe( gulp.dest('dist/js/'))
     .pipe(reload({stream:true}));
 });
  
 gulp.task('templates', function() {
-  return gulp.src('src/jade/*.jade')
-    .pipe( jade({ pretty: true }))
-    .pipe( gulp.dest('dist/'))
+  return gulp.src('src/jade/**/*.jade')
+    .pipe(jade({ pretty: false}))
+    .pipe(gulp.dest('dist/'))
     .pipe(reload({stream:true}));
 });
 

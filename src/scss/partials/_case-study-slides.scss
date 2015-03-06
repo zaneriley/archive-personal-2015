@@ -17,15 +17,20 @@
   color:$absolute-color;
   margin:0;
   overflow:hidden;
+  min-height:35em;
+  height:85vh;
+  
     & .case-study-information {
-      max-width:43em;
+      max-width:(43em);
       position:relative;
       margin:0 ms(0);
       padding:ms(4) 0;
       @include mq(medium){
         margin:0 auto;
+        padding-left:ms(0);
+        padding-right:ms(0);
       }
-      position:relative;
+     
       & .client{
         font-size:8vmax;
         margin-top:1.3rem;
@@ -36,7 +41,8 @@
       }
       & .intro{
         @include mq(medium){
-          max-width:$max-width;      
+          max-width:$max-width;
+          font-size:ms(2);     
         }
       }
       & .view-case-study{

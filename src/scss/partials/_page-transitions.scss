@@ -1,0 +1,27 @@
+.m-scene .scene_element {
+  animation-duration: 0.250s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  opacity:1;
+}
+
+.m-scene .scene_element--fadein {
+  animation-name: fadeIn; }
+  
+.m-scene .scene_element--fadeinUp{
+  animation-name: fade-in-and-up; }
+
+.m-scene.is-exiting .scene_element {
+  animation-direction: alternate-reverse; }
+
+/* For Lazy loading images */
+
+.lazyloaded{
+  opacity:1;
+  transition:opacity .250s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

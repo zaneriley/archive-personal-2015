@@ -1,17 +1,52 @@
-//- index.jade
+//- about.jade
 extends layout/layout.jade        
 
 block content
-  .profile-photo
-    video(autoplay='true', loop='true', poster='punks-256w.jpg')
-      source(src='profile-photo.webm', type='video/webm')
-      source(src='img/profile-photo.mp4', type='video/mp4')
-    img(src='img/profile-photo.jpg', alt="Zane Riley - User Experience")
+    .profile-photo.scene_element.scene_element--fadein
+      video(autoplay='true', loop='true', poster='img/profile-photo.jpg')
+        source(src='profile-photo.webm', type='video/webm')
+        source(src='img/profile-photo.mp4', type='video/mp4')
+      img(src='img/profile-photo.jpg', alt='Zane Riley - User Experience')
 
-  .about-me
-    h1 I love Megan Keesee
-    p Brooklyn migas kitsch occupy typewriter, ennui literally kogi flannel PBR polaroid Tumblr meditation DIY sustainable. XOXO small batch typewriter, High Life beard sartorial DIY organic Wes Anderson heirloom taxidermy mustache. Selfies pork belly readymade High Life pug mustache. Butcher mumblecore 3 wolf moon, pork belly readymade tattooed put a bird on it iPhone.
-    p YOLO craft beer trust fund, keytar cliche selfies ethical food truck. Banksy single-origin coffee leggings Truffaut dreamcatcher narwhal. Gastropub sriracha distillery, hashtag tattooed tilde vinyl fashion axe photo booth brunch hoodie pop-up.
-    p Paleo ethical master cleanse, YOLO small batch pop-up Helvetica semiotics blog. Cliche Portland XOXO Tumblr beard kale chips, keytar polaroid fingerstache four loko direct trade Echo Park tousled. Craft beer migas photo booth viral cronut pickled. Photo booth tattooed selfies stumptown.
-    p Pour-over kitsch ennui, distillery health goth chia vegan tousled cardigan try-hard cold-pressed disrupt cray locavore bicycle rights. Disrupt pickled flexitarian deep v mustache paleo, Tumblr fixie Brooklyn direct trade master cleanse next level retro banjo.
-    
+    .main-content.scene_element.scene_element--fadein
+      .about-me
+        h2 Who I Am
+        
+        p My name is Zane. I'm a 24 year old product designer recently relocated to San Francisco.
+        
+        p Currently user experience designer for Days for Girls and Mother 4. Previously digital strategist with Red Letter Communications. Graduated in 2014 with a BS in public relations. 
+        
+        .skills
+          h2 HCI 
+          ul
+            li User Research & Testing
+            li Information Architecture
+            li Visual Design
+            li Prototyping
+            li Wireframing
+
+        .lang-list
+          h2 Lang List
+          ul
+            li HTML5
+            li CSS3 / Sass / Less
+            li Javascript / Jquery
+            li Grunt / Gulp
+            li PHP
+        
+        .software
+          h2 Software
+          ul
+            li Sketch
+            li Illustrator
+            li After Effects
+            li Photoshop
+            li Sublime Text
+
+        p If I'm not building something, I'm camping with my dog, volunteering with 
+          a(href='http://www.bbbs.org/', alt='Big Brothers, Big Sisters') Big Brothers, Big Sisters
+          |  and sending postcards back home.  You can check out the 
+          a(href='https://untappd.com/user/ZaneRiley', alt='My Untappd Profile') beers
+          |  and 
+          a(href='https://www.goodreads.com/user/show/33446427-zane-riley', alt='My Goodreads Profile') books
+          |  I love—and recommend me more. 

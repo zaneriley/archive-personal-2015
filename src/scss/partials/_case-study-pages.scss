@@ -1,0 +1,104 @@
+.headline-photo{
+  margin-top:5em;
+  background-image:url('../img/dfg-adjumani-768w.jpg');
+  @include mq(medium){
+    background-image:url('../img/dfg-adjumani-1024w.jpg');
+  }
+  @include mq(large){
+    background-image:url('../img/dfg-adjumani-1440w.jpg');
+  }
+  background-size:cover;
+  background-position:center;
+}
+.case-study-title{
+  text-align:center;
+  margin:0 auto;
+  min-height:ms(12);
+  height:80vh;
+  max-height:ms(16);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  & h1{
+    text-transform:uppercase;
+    line-height:0.9;
+    position:relative;
+    color:$danger-color;
+    & .small{
+      font-weight:300;
+      font-size:6vw;
+      @include mq(medium){
+        font-size:ms(-1);
+      }
+    }
+    & .large{
+      font-size:24vw;
+      animation-delay:.5s;
+      @include mq(medium){
+        font-size:ms(4);
+      }
+    }
+  }
+  & h2{
+    animation-delay:1.5s;
+  }
+}
+
+.dfg-wrapper{
+  margin:0 auto;
+  padding:ms(4) ms(0);
+  position:relative;
+  max-width:$max-width;
+}
+.dfg-wrapper--wide{
+  background:$absolute-color;
+  margin-top:0;
+  
+}
+.dfg-flower{
+  max-width: 10rem;
+  width:20vmin;
+  position: relative;
+  transform: rotate(0);
+  cursor: pointer;
+  left: 0;
+  right: 0;
+  margin: 0 auto ms(-3) auto;
+  display:block;
+  animation-delay:1s;
+
+  @include mq(medium){
+    position:absolute;
+    bottom:-0.5em;
+    left:initial;
+    right:-1.5em;
+    width:6vw;
+    max-width:ms(2);
+  }
+
+  &.opened{
+    animation: spin 3s linear infinite both !important;
+    animation-iteration-count: 1 !important;
+    cursor:default;
+  }
+}
+
+.tags{
+  width:100%;
+  text-align:center;
+  font-size:ms(-1);
+  color:$absolute-color;
+  animation-delay:1.5s;
+  margin-top:1.3333rem;
+  & li{
+    display:inline-block;
+    padding:ms(-3);
+    margin:ms(-4);
+    background-color:$sub-text;
+    border-radius:ms(-3);
+
+  }
+}

@@ -13,10 +13,11 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
   margin:0;
+  outline:none;
 }
 
 * + * {
-  margin-top:1.3em;
+  margin-top:1.33333rem;
 }
 
 body {
@@ -27,6 +28,11 @@ body {
   line-height: 1.45;
   margin:0;
 }
+
+#main{
+  margin-top:0;
+}
+
 /* ************
  * 
  *  TYPOGRAPHY 
@@ -34,34 +40,55 @@ body {
  * ************ */
 
 h1, h2, h3, h4 {
-  font-weight: inherit;
   line-height: 1.2;
   font-weight:900;
 }
 
 h1 {
   margin-top: 0;
-  font-size: ms(4);
+  font-size:ms(3);
+  @include mq(medium){
+    font-size: ms(4);
+  }
 }
 
 h2 {
-  font-size: ms(3);
+  font-size:ms(2);
+  @include mq(medium){
+    font-size: ms(3);
+  }
 }
 
 h3 {
-  font-size: ms(2);
+  font-size:ms(1);
+  @include mq(medium){
+    font-size: ms(2);
+  }
 }
 
 h4 {
-  font-size: ms(1);
+  text-transform:uppercase;
+  @include mq(medium){
+    font-size: ms(1);
+  }
 }
 
 small, .font_small {
   font-size: ms(-1);
 }
-p{
+
+strong{
+  font-weight:900;
+}
+
+p, li{
   font-size:ms(1);
 }
+
+li{
+  margin-top:0;
+}
+
 a {
   text-decoration:none;
   color:$accent-color;
@@ -71,6 +98,7 @@ a:hover{
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 90%, $primary-color 10%);
   background-repeat: repeat-x;
 }
+
 .nowrap{
   white-space: nowrap;
 }
@@ -84,13 +112,29 @@ a:hover{
   text-transform:uppercase;
   color:$primary-color;
   letter-spacing:0.05em;
+  cursor:pointer;
+  transition:all .4s ease-in-out;
 }
 
 .btn:hover{
   background:$primary-color;
   color:$absolute-color;
+  transition:all .1s ease-in-out;
 }
 
+figure{
+  & img{
+    box-shadow: 0em .21em 1em 0.1em rgba(0,0,0,0.25);
+    width:100%;
+    opacity:0;
+  }
+  & figcaption{
+    max-width:ms(12);
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .row{
   max-width:$max-width;
 }
