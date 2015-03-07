@@ -2,7 +2,7 @@
 extends ../layout/layout.jade        
 
 block content
-  article
+  article(role='main')
     .headline-photo
       .case-study-title
         h1 
@@ -139,18 +139,13 @@ block content
           h4 Intial Sketching
 
           p With an audience in mind, our content identified and some idea of our information architecture, we can begin sketching out the layout. The donation form is pretty important so let's discuss that.
-
-          p There's a lot of 
-            a(href='http://kylerush.net/blog/meet-the-obama-campaigns-250-million-fundraising-platform/', target='_blank') great case study information that came out of Barack Obama's 2012 campaign. Specifically, it set a lot of standards for donation forms.
-
-
-
+ 
           figure
             img.lazyload(src='/img/dfg-sketches-256w.jpg', data-srcset='/img/dfg-sketches-256w.jpg 256w, /img/dfg-sketches-512w.jpg 512w /img/dfg-sketches-768w.jpg 768w, /img/dfg-sketches-1024w.jpg 1024w, /img/dfg-sketches-1440w.jpg 1440w', alt='Wireframe sketches')
             figcaption Earliest sketches of Days for Girls Donation Form
         
           h4 Wireframing
-
+          p The wireframes were created in Sketch and then connected using Invision. Below is the donation module.
           figure
             img.lazyload(src='/img/dfg-donation-module-256w.gif', data-srcset='/img/dfg-donation-module-256w.gif 256w, /img/dfg-donation-module-512w.gif 512w, /img/dfg-donation-module-768w.gif 768w, /img/dfg-donation-module-1024w.gif 1024w, /img/dfg-donation-module-1440w.gif 1440w', alt='Wireframe sketches', alt='Donate Module Wireframe')
             figcaption Donate Module Wireframes

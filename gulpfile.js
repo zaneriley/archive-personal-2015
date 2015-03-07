@@ -14,6 +14,7 @@ var gulp         = require('gulp'),
     marked       = require('marked'), // For :markdown filter in jade
     path         = require('path'),
     server       = tinylr();
+    rename       = require("gulp-rename");
     
 
 var paths = {
@@ -47,7 +48,7 @@ gulp.task('js', function() {
          gulp.src('src/js/mobile-menu-icon.js'),
          gulp.src('src/js/final-touches.js'),
          gulp.src('src/js/*.js')
-    // .pipe( uglify() )
+    .pipe( uglify() )
     .pipe( concat('app.min.js'))
     .pipe( gulp.dest('dist/js/'))
     .pipe(reload({stream:true}));
@@ -56,6 +57,9 @@ gulp.task('js', function() {
 gulp.task('templates', function() {
   return gulp.src('src/jade/**/*.jade')
     .pipe(jade({ pretty: false}))
+    .pipe(rename(function (path) {
+        path.extname = ""
+    }))
     .pipe(gulp.dest('dist/'))
     .pipe(reload({stream:true}));
 });

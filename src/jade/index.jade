@@ -3,7 +3,7 @@ extends layout/layout.jade
 
 block content
 
-    section.introduction-wrapper.scene_element.scene_element--fadein
+    section.introduction-wrapper.scene_element.scene_element--fadein(role='main')
       .introduction-text
         h1.title Hello. My name is Zane.
         h3 User Experience - 
@@ -11,23 +11,23 @@ block content
         h2.subtitle I make products easier to use and help businesses communicate more effectively. Below is a collection of my personal work. 
 
 
-    section.case-study.case-study--days-for-girls.scene_element.scene_element--fadein
+    section.case-study.case-study--days-for-girls.scene_element.scene_element--fadein(role='complementary', aria-labelledby='client')
       .case-study-information
-        //- h2.client Days for Girls
+        h2.client Days for Girls
         img.logo.lazyload(data-src='img/days-for-girls-logo.svg', alt='Days for Girls International')
         p.intro
           | Days for Girls provides girls around the world with sustainable female hygiene and health education. Facing tremendous growth, Days for Girls needed an online experience to match its programs. 
         p.view-case-study
-          a.btn.btn-primary(href='case-studies/days-for-girls.html', alt='View Days for Girls Case Study') View Case Study
+          a.btn.btn-primary(href='case-studies/days-for-girls', onClick="ga('send', 'event', 'Contact', 'Click', 'Days for Girls Case Study', 1);") View Case Study
 
-    section.case-study.case-study--mother-4-game.scene_element.scene_element--fadein
+    section.case-study.case-study--mother-4-game.scene_element.scene_element--fadein(role='complementary', aria-labelledby='client')
       .case-study-information
-        //- h2.client MOTHER 4
+        h2.client MOTHER 4
         img.logo.lazyload(data-src='http://mother4game.com/img/logo.svg', alt='Mother 4 Game')
         p.intro 
           | An indie sequel to the cult-classic video game series, Mother. Developed over two years, the video game is slated for release in summer 2015 to an active, global fanbase. 
         p.view-case-study
-          a.btn.btn-primary(href='case-studies/mother-4-game.html', alt='View Mother 4 Case Study') View Case Study
+          a.btn.btn-primary(href='case-studies/mother-4-game', onClick="ga('send', 'event', 'Case Study', 'Click', 'Mother 4 Case Study', 1);") View Case Study
 
       
       //- .browser-window
@@ -39,11 +39,11 @@ block content
         img.lazyload(data-src='img/mother-4-marble.svg', alt='Earth')
         //- .bottom-gradient
 
-    section.other-work.scene_element.scene_element--fadein
+    section.other-work.scene_element.scene_element--fadein(role='complementary', aria-labelledby='other-work-label')
 
       
       .other-work-item-wrapper
-        h2 Visual Design, Prototypes & Other Goodies
+        h2.other-work-label Visual Design, Prototypes & Other Goodies
 
         .other-work-item.one-half
           .pineapples
@@ -87,7 +87,7 @@ block content
                 span View on Dribbble
 
           .other-work-item.one-half
-            img.lazyload(data-sizes='auto', src='img/project-timeline-256w.gif', data-srcset='img/project-timeline-256w.gif 256w, img/project-timeline-512w.gif 512w, img/project-timeline-1024w.gif 1024w, img/project-timeline-1440w.png 1440w')
+            img.lazyload(data-sizes='auto', src='img/project-timeline-256w.gif', data-srcset='img/project-timeline-256w.gif 256w, img/project-timeline-512w.gif 512w, img/project-timeline-1024w.gif 1024w, img/project-timeline-1440w.gif 1440w', alt='Project Timeline Tool')
             a.view-more.view-more--github(href='http://github.com/zaneriley/project-timeline', target='_blank')
               .view-more-description
                 span.icon-github
@@ -99,7 +99,7 @@ block content
             video(autoplay='true', loop='true', poster='img/house-music-fallback.jpg')
               source(src='/img/house-music.webm', type='video/webm')
               source(src='/img/house-music.mp4', type='video/mp4')
-            img(src='img/house-music-fallback.jpg', alt='Zane Riley - User Experience')
+            img(src='img/house-music-fallback.jpg', alt='House Music Mobile Number Capture Demo')
             a.view-more.view-more--codepen(href='http://codepen.io/zaneriley/pen/LfrCu', target='_blank')
               .view-more-description 
                 span.icon-codepen
@@ -116,14 +116,14 @@ block content
               span View on Instagram
 
         .other-work-item.one-half
-          img.lazyload(data-src='img/bad-party.gif', title='Bad Party Banner')
+          img.lazyload(data-src='img/bad-party.gif', alt='Bad Party Banner')
           a.view-more.view-more--dribbble
             .view-more-description
                 span.icon-dribbble 
                 span View on Dribbble
 
         .other-work-item.one-fourth.soundcloud-player
-          img.lazyload(data-src='img/agency-icons.svg', title='Agency Repeatable Icons')
+          img.lazyload(data-src='img/agency-icons.svg', alt='Agency Repeatable Icons')
           a.view-more.view-more--dribbble
             .view-more-description
                 span.icon-dribbble 

@@ -32,6 +32,7 @@
       }
      
       & .client{
+        display: none; 
         font-size:8vmax;
         margin-top:1.3rem;
         @include mq(medium){
