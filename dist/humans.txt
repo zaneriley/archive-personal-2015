@@ -1,0 +1,39 @@
+                            
+/* TEAM */
+
+  Developers: @zaneriley
+  Location: Rural missouri and my Airbnb host's house in Berkeley, Ca.
+      
+
+/* SITE */
+
+  Last Update:  03/10/15
+  URL:        http://zaneriley.com
+  Language:   English
+  Doctype:    HTML5
+
+
+/* COMPONENTS */
+
+  jQuery - http://jquery.com/
+  lazysizes - https://github.com/aFarkas/lazysizes
+  smoothState - http://weblinc.github.io/jquery.smoothState.js/
+  Typekit - http://typekit.com/
+
+
+/* MADE WITH */
+
+  Jade - http://jade-lang.com/
+  Sass - http://sass-lang.com
+  Gulp - http://gulpjs.com/
+
+
+/* SOFTWARE */
+
+  Git - http://git-scm.com/
+  Sublime Text 3 - http://www.sublimetext.com/3
+
+
+/* THANKS TO*/
+
+  Days for Girls, Mother 4, Josh, Adam and most of all to Megan. 

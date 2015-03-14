@@ -20,6 +20,7 @@
 .navigation-mobile-menu-bg{
   z-index:1;
 }
+
 canvas{
   z-index:-1;
 }
@@ -36,6 +37,12 @@ canvas{
     z-index:0;
   }
 }
+.case-study-title{
+  z-index:1;
+}
+.video-container{
+  z-index:-1;
+}
 
 .view-more{
   z-index:1;
@@ -47,3 +54,11 @@ canvas{
   }
 }
 
+.m4g{
+  &:before{
+    z-index:0;
+  }
+  &:after{
+    z-index:-1;
+  }
+}

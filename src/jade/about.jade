@@ -3,10 +3,10 @@ extends layout/layout.jade
 
 block content
     .profile-photo.scene_element.scene_element--fadein
-      video(autoplay='true', loop='true', poster='img/profile-photo.jpg')
-        source(src='profile-photo.webm', type='video/webm')
-        source(src='img/profile-photo.mp4', type='video/mp4')
-      img(src='img/profile-photo.jpg', alt='Zane Riley - User Experience')
+      video(autoplay='true', loop='true', poster='//d3eslul21yiiti.cloudfront.net/img/profile-photo-256w.jpg')
+        source(src='//d3eslul21yiiti.cloudfront.net/img/profile-photo.webm', type='video/webm')
+        source(src='//d3eslul21yiiti.cloudfront.net/img/profile-photo.mp4', type='video/mp4')
+      img.lazyload(src='//d3eslul21yiiti.cloudfront.net/img/profile-photo.jpg-256w.jpg', data-srcset='//d3eslul21yiiti.cloudfront.net/img/profile-photo-256w.jpg 256w, img/profile-photo-920w.jpg 920w', alt='Zane Riley - User Experience & Product Design', data-sizes='auto')
 
     .main-content.scene_element.scene_element--fadein
       .about-me
@@ -28,14 +28,14 @@ block content
         .lang-list
           h2 Lang List
           ul
-            li HTML5
+            li HTML5 / Jade
             li CSS3 / Sass / Less
-            li Javascript / Jquery
-            li Grunt / Gulp
+            li Javascript / JQuery
             li PHP
+            li Git & the command line.
         
         .software
-          h2 Software
+          h2 Tools
           ul
             li Sketch
             li Illustrator

@@ -2,5 +2,215 @@
 extends ../layout/layout.jade        
 
 block content
+    article(role='main')
+      .m4g.headline-photo
+        .case-study-title
+          h1 
+            span.small.scene_element.scene_element--fadeinUp Truancy, adventure and an aversion to
+            <br> 
+            span.large.scene_element.scene_element--fadeinUp business suits!
+
+      .dfg-wrapper
+          h2.scene_element.scene_element--fadein Creating an indie sequel to a cult-classic video game series.
+          ul.tags.scene_element.scene_element--fadein
+            li A/B testing
+            li branding
+            li competitor analysis
+            li content analysis
+            li copy writing
+            li sketching
+            li user testing
+            li visual design
+
+          p.lead.scene_element--fadein Mother 4 is a tribute to one of the most influential video game series of all time, Mother, which is known in the US as Earthbound. You play as a group of inexperienced kids on an adventure to save the world from weird creatures and weirder people.
+
+          h3 My Role
+
+          p I'm the product designer and project manager for Mother 4. I oversee many of the games features, manage milestones, marketing and PR and act as a community manager.
+
+          h3 Results
+
+          p During my time with this project, we've had a number of successes.
+
+          ul 
+            li 55K+ emails captured (as of March '15)
+            li Over 1,000,000 YouTube views with earned media on Kotaku, Polygon, CrunchyRoll and more.
+            li Overwhelmingly positive feedback from fans.
+            li Lowered overhead costs by 90% by switching to a completely static site hosted on AWS S3 (originally on Wordpress on EC2).
+            li Lowered number of inquiries received by 17%, using our CRM to influence our content strategy. 
+            li Updated the battle interface resulting in 16% more screen real estate and better visual affordances. 
+
+          hr
+          h2 Backstory
+
+          p.note Mother, or Earthbound as its known in the US, is a cult-classic with one of the most interesting histories in all of video games. There's even a 
+            a(href='https://www.kickstarter.com/projects/fangamer/you-are-now-earthbound', target='_target') documentary about it. 
+            | Recommended reading is Destructoid's article  
+            a(href='http://www.destructoid.com/earthbound-so-what-s-the-big-deal--258465.phtml', target='_blank') "EarthBound: So what's the big deal?"
+          
+          p Take a look at our latest trailer to get a feel for the game.
+
+          figure.fluid-container
+            iframe.lazyload(data-src="//www.youtube.com/embed/-qtQWUF6-Co", frameborder="0", allowfullscreen="")
+            figcaption The latest Mother 4 trailer.
+          
+          h2 Challenges
+
+          p 
+            strong A. Maintaining a Strange Brand.
+          p The Mother series had a very poor marketing campaign, but one that's been instilled in its history.  Mother 4 needed to stay close to that marketing campaign, yet feel fresh and relevant as an indie game in 2015.. 
+
+          p 
+            strong B. Small budget.
+          p Hosting costs were high for an open-source video game. Any way we could save funds without cutting quality would be a focus. By switching to a completely static site on Amazon's S3, we not only reduced our costs by 90%, but also reduced loading time.
+
+          p 
+            strong C. No way of measuring success.
+          p When I joined the team, we had no baseline metric for success, and we needed a way to track how we were performing. I introduced an exclusive 'invite list' through Mailchimp that we could use as a baseline metric.
+          
+          h2 Maintaining a Strange Brand
+
+          h3 Looking at Mother 4's Predecessors
+
+          p Perhaps the greatest challenge we faced was the branding. Mother has never sold well in the US, partly due to a poorly ran campaign from Nintendo. (
+            a(href='http://earthboundcentral.com/2009/01/earthbounds-marketing-campaign/', target='_blank') Read: Earthbound's Marketing Campaign
+            | ) The reverse psychology of continuously saying "This Game Stinks!" did not go over well, and sales eventually flopped. We needed to stay true to the series, and therefore that strange marketing. Yet, our other audience was too young to play Mother 2 (Earthbound in the US) when it was first released, and therefore had never seen the old marketing campaign. They would instead have the same expectations for it as any new indie game.
+
+          p We ended up maintaining the signature shade of red used throughout every game, and introducing quirky taglines and copy, remincisent of the original "This Game Stinks!" campaign, yet actually communicated what the game was about to old and new fans alike.
+
+          figure
+            img.lazyload(src='//d3eslul21yiiti.cloudfront.net/img/mother-logos-256w.jpg', data-srcset='//d3eslul21yiiti.cloudfront.net/img/mother-logos-512w.jpg 512w, //d3eslul21yiiti.cloudfront.net/img/mother-logos-768w.jpg 768w, //d3eslul21yiiti.cloudfront.net/img/mother-logos-1024w.jpg 1024w, //d3eslul21yiiti.cloudfront.net/img/mother-logos-1440w.jpg 1440w, //d3eslul21yiiti.cloudfront.net/img/mother-logos-2500w.jpg 2500w', alt='Mother series logos', data-sizes='auto')
+            figcaption Logos for previous Mother games. Released in 1989, 1994, 2006 respectively.
+
+          figure
+            img.lazyload(src='//d3eslul21yiiti.cloudfront.net/img/mother-4-logo-256w.gif', data-srcset='//d3eslul21yiiti.cloudfront.net/img/mother-4-logo-512w.gif 512w, //d3eslul21yiiti.cloudfront.net/img/mother-4-logo-768w.gif 768w, //d3eslul21yiiti.cloudfront.net/img/mother-4-logo-1024w.gif 1024w, //d3eslul21yiiti.cloudfront.net/img/mother-4-logo-1440w.gif 1440w, //d3eslul21yiiti.cloudfront.net/img/mother-4-logo-2500w.gif 2500w', alt='Mother series logos', data-sizes='auto')
+            figcaption The new Mother 4 logo.
+
+          .brand-colors
+            .primary
+              svg(viewbox="0 0 120 120", version="1.1", xmlns="http://www.w3.org/2000/svg")
+                circle(cx="60", cy="60", r="50")
+              p.small Ninten Red
+                span #E51C23
+            .secondary
+              svg(viewbox="0 0 120 120", version="1.1", xmlns="http://www.w3.org/2000/svg")
+                circle(cx="60", cy="60", r="50")
+              p.small Start Green
+                span #00BFA5
+            .info
+              svg(viewbox="0 0 120 120", version="1.1", xmlns="http://www.w3.org/2000/svg")
+                circle(cx="60", cy="60", r="50")
+              p.small Ness Purple
+                span #3F51B5
+            .alert
+              svg(viewbox="0 0 120 120", version="1.1", xmlns="http://www.w3.org/2000/svg")
+                circle(cx="60", cy="60", r="50")
+              p.small Travis Yellow
+                span #FFEB3B
+            .clearfix
+
+          p The other branding colors were taken from the game itself, particularly its protagonists Ness and Travis. 
+
+          figure
+            img.lazyload(src='//d3eslul21yiiti.cloudfront.net/img/m4g-character-comparisons-256w.jpg', data-srcset='//d3eslul21yiiti.cloudfront.net/img/m4g-character-comparisons-512w.jpg 512w, //d3eslul21yiiti.cloudfront.net/img/m4g-character-comparisons-768w.jpg 768w, //d3eslul21yiiti.cloudfront.net/img/m4g-character-comparisons-1024w.jpg 1024w, //d3eslul21yiiti.cloudfront.net/img/m4g-character-comparisons-1200w.jpg 1200w', alt='Mother 2 and Mother 4 Character Comparisons', data-sizes='auto')
+            figcaption Clay models of Ness and Travis, Mother 2 and Mother 4's protagonists.
+
+          h3 Looking at Indie Games
+
+          p It's a tight line to walk to stay close to a series, yet stand out in a sea of indie games in 2015. One of our key advantages was that we spent time on the UX with our marketing, and not only the game, something that most indie games don't have the resources for. Concurrently with our game production, we were able to able to go through the typical design process. 
+
+          figure
+            img.lazyload(src='//d3eslul21yiiti.cloudfront.net/img/m4g-indie-game-websites-256w.jpg', data-srcset='//d3eslul21yiiti.cloudfront.net/img/m4g-indie-game-websites-512w.jpg 512w, //d3eslul21yiiti.cloudfront.net/img/m4g-indie-game-websites-768w.jpg 768w, //d3eslul21yiiti.cloudfront.net/img/m4g-indie-game-websites-1024w.jpg 1024w, //d3eslul21yiiti.cloudfront.net/img/m4g-indie-game-websites-1440w.jpg 1440w, //d3eslul21yiiti.cloudfront.net/img/m4g-indie-game-websites-2500w.jpg 2500w', alt='Indie Game Websites', data-sizes='auto')
+            figcaption Three popular games in the indie game scene. 
+              a(href='http://yachtclubgames.com/shovel-knight/', target='_blank') Shovel Knight,
+              | 
+              a(href='http://www.11bitstudios.com/games/16/this-war-of-mine', target='_blank') This War of Mine
+              |  and 
+              a(href='http://www.torchlight2game.com/', target='_blank') Torchlight II.
+
+          figure
+            img.lazyload(src='//d3eslul21yiiti.cloudfront.net/img/m4g-site-sketches-256w.jpg', data-srcset='//d3eslul21yiiti.cloudfront.net/img/m4g-site-sketches-512w.jpg 512w, //d3eslul21yiiti.cloudfront.net/img/m4g-site-sketches-768w.jpg 768w, //d3eslul21yiiti.cloudfront.net/img/m4g-site-sketches-1024w.jpg 1024w, //d3eslul21yiiti.cloudfront.net/img/m4g-site-sketches-1440w.jpg 1440w', alt='Mother 4 Intial Sketches', data-sizes='auto')
+            figcaption Initial Sketches of the Mother 4 Website.
+
+          figure
+            img.lazyload(src='//d3eslul21yiiti.cloudfront.net/img/m4g-website-256w.jpg', data-srcset='//d3eslul21yiiti.cloudfront.net/img/m4g-website-512w.jpg 512w, //d3eslul21yiiti.cloudfront.net/img/m4g-website-768w.jpg 768w, //d3eslul21yiiti.cloudfront.net/img/m4g-website-1024w.jpg 1024w, //d3eslul21yiiti.cloudfront.net/img/m4g-website-1440w.jpg 1440w', alt='Mother 4 Website', data-sizes='auto')
+            figcaption Screenshot of  
+              a(href='http://Mother4Game.com', target='_blank') the Mother 4 website.
+
+          p To inform our content strategy, we did a competitive analysis, examined the psychographic information we had, and looked at over 
+            strong 5,000 emails of fans asking questions.
+
+          figure
+            img.lazyload(src='//d3eslul21yiiti.cloudfront.net/img/m4g-email-topics-256w.gif', data-srcset='//d3eslul21yiiti.cloudfront.net/img/m4g-email-topics-512w.gif 512w, //d3eslul21yiiti.cloudfront.net/img/m4g-email-topics-768w.gif 768w, //d3eslul21yiiti.cloudfront.net/img/m4g-email-topics-1024w.gif 1024w, //d3eslul21yiiti.cloudfront.net/img/m4g-email-topics-1440w.gif 1440w', alt='Email Topics', data-sizes='auto')
+            figcaption Emails sorted by topic. Data from our CRM software 
+              a(href='http://Desk.com', target='_blank') Desk.com
+          
+          p That data was then turned into copy to help better address those questions.
+
+          figure
+            img.lazyload(src='//d3eslul21yiiti.cloudfront.net/img/m4g-content-strategy-256w.jpg', data-srcset='//d3eslul21yiiti.cloudfront.net/img/m4g-content-strategy-512w.jpg 512w, //d3eslul21yiiti.cloudfront.net/img/m4g-content-strategy-768w.jpg 768w, //d3eslul21yiiti.cloudfront.net/img/m4g-content-strategy-1024w.jpg 1024w, //d3eslul21yiiti.cloudfront.net/img/m4g-content-strategy-1440w.jpg 1440w', alt='Content Strategy', data-sizes='auto')
+            figcaption Our four feature points on the home page.
+          
+          p This cut down on the number of emails we received by 17%.
+
+          h2 Defining Success
+
+          p Without releasing the game and getting feedback, we had no real way to define success. That lead to the creation of our key performance indicator, the invite list. This was our equivalent of a "pre-order" as well as a way to say thank you to our early supporters. Fans who joined the invite list would receive the game before the general public.
+
+          figure
+            img.lazyload(src='//d3eslul21yiiti.cloudfront.net/img/m4g-invite-list-256w.gif', data-srcset='//d3eslul21yiiti.cloudfront.net/img/m4g-invite-list-512w.gif 512w, //d3eslul21yiiti.cloudfront.net/img/m4g-invite-list-768w.gif 768w, //d3eslul21yiiti.cloudfront.net/img/m4g-invite-list-1024w.gif 1024w, //d3eslul21yiiti.cloudfront.net/img/m4g-invite-list-1440w.gif 1440w', alt='Invite List', data-sizes='auto')
+            figcaption The Invite List
+
+          h3 Growing the Invite List
+
+          p We saw some great initial traction at first: 10,000 emails in just a couple weeks. Shortly after, we flatlined with a conversion rate of 4.68% with modest traffic. Unless we hit a substantial traffic bump or jumped our conversion rate up, we'd miss our mark of 50,000 emails by release time. So we went to A/B testing.
+
+          p The first thing I tested was our copy because its the simplest to  change. The original call to action was:
+
+          blockquote "Get notified when Mother 4 is released. Enter your email below."
+
+          p Not only was this incredibly passive, but the last thing people want is another email in their inbox. Our analytics also suggested that nearly 45% of visitors were returning visitors. People didn't need to be reminded about the release because they were returning to the site to stay up to date.
+
+          p One of the ideas I love is the idea of scarcity. If you put a limit on something, suddenly it becomes valuable. (Like 
+            a(href='http://thenextweb.com/insider/2013/02/07/mailboxs-user-access-queue-is-a-work-of-frustrating-genius/', target='_blank') Mailbox's invite queue.
+            | ) If we changed the "notify list" to an "invite list", things start to get a lot more interesting.
+
+          blockquote "Join the invite list to get first access to Mother 4."
+
+          p Simply by changing the context, suggesting there was a finite limit, we raised the conversion rate to 7.88%. Only 50,000 supporters would get the game early. Not only did this scarcity encourage fans to sign up, but it added value to our earliest supporters.
+
+          p Along with other optimizations like reducing our first time to render (thanks, gzipping), we'd eventually top out near 10% by the time we hit the 50,000 emailmark (months before release).
+
+          figure
+            img.lazyload(src='//d3eslul21yiiti.cloudfront.net/img/m4g-conversion-rate-256w.gif', data-srcset='//d3eslul21yiiti.cloudfront.net/img/m4g-conversion-rate-512w.gif 512w, //d3eslul21yiiti.cloudfront.net/img/m4g-conversion-rate-768w.gif 768w, //d3eslul21yiiti.cloudfront.net/img/m4g-conversion-rate-1024w.gif 1024w, //d3eslul21yiiti.cloudfront.net/img/m4g-conversion-rate-1440w.gif 1440w, //d3eslul21yiiti.cloudfront.net/img/m4g-conversion-rate-2500w.gif 2500w', alt='Conversion Rate', data-sizes='auto')
+            figcaption Increased conversion rate over the past 12 months.
+          
+          h2 Improving the Battle Interface
+
+          p Something that's bothered me through the game's development has been our battle interface. Mother 4 has incredibly interesting battle backgrounds, enemies and effects yet over 16% of the screen is covered up by the battle interface.
+          
+          figure
+            img.lazyload(src='//d3eslul21yiiti.cloudfront.net/img/m4g-old-battle-ui-256w.png', data-srcset='//d3eslul21yiiti.cloudfront.net/img/m4g-old-battle-ui-512w.png 512w, //d3eslul21yiiti.cloudfront.net/img/m4g-old-battle-ui-768w.png 768w, //d3eslul21yiiti.cloudfront.net/img/m4g-old-battle-ui-1024w.png 1024w, //d3eslul21yiiti.cloudfront.net/img/m4g-old-battle-ui-1440w.png 1440w', alt='Old Battle UI', data-sizes='auto')
+            figcaption The original battle UI.
+
+          p Simply by inlining the labels, we can reduce the UI size from 16% of the screen to 6%. We also corrected some the unequal spacing.
+
+          figure
+            img.lazyload(src='//d3eslul21yiiti.cloudfront.net/img/m4g-new-battle-ui-200w.png', data-srcset='//d3eslul21yiiti.cloudfront.net/img/m4g-new-battle-ui-200w.png 200w, //d3eslul21yiiti.cloudfront.net/img/m4g-new-battle-ui-400w.png 400w, //d3eslul21yiiti.cloudfront.net/img/m4g-new-battle-ui-800w.png 800w, //d3eslul21yiiti.cloudfront.net/img/m4g-new-battle-ui-1600w.png 1600w', alt='New Battle UI', data-sizes='auto')
+            figcaption The new battle UI.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   

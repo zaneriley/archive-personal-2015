@@ -24,10 +24,10 @@ footer{
   }
 
   & .contact-information{
-  display: block;
-  text-align:center;
-  width:100%;
-  padding:0 ms(0);
+    display: block;
+    text-align:center;
+    width:100%;
+    padding:0 ms(0);
   }
 
 } 
@@ -73,6 +73,9 @@ footer{
 .love{
   text-align:center;
   font-size:1rem;
+  a:hover {
+    text-decoration:none;
+  }
 }
 
 /* Heart Icon */

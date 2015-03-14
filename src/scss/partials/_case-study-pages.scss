@@ -1,15 +1,12 @@
 .headline-photo{
   margin-top:5em;
-  background-image:url('../img/dfg-adjumani-768w.jpg');
-  @include mq(medium){
-    background-image:url('../img/dfg-adjumani-1024w.jpg');
-  }
-  @include mq(large){
-    background-image:url('../img/dfg-adjumani-1440w.jpg');
-  }
   background-size:cover;
   background-position:center;
+  position:relative;
+  overflow:hidden;
 }
+
+
 .case-study-title{
   text-align:center;
   margin:0 auto;
@@ -22,11 +19,13 @@
   justify-content: center;
   align-content: stretch;
   align-items: center;
+
   & h1{
     text-transform:uppercase;
     line-height:0.9;
     position:relative;
-    color:$danger-color;
+    color:$absolute-color;
+
     & .small{
       font-weight:300;
       font-size:6vw;
@@ -34,17 +33,90 @@
         font-size:ms(-1);
       }
     }
+
     & .large{
-      font-size:24vw;
+      font-size:21vw;
       animation-delay:.5s;
       @include mq(medium){
         font-size:ms(4);
       }
     }
   }
+
   & h2{
     animation-delay:1.5s;
   }
+}
+
+.tags{
+  width:100%;
+  text-align:center;
+  font-size:ms(-1);
+  color:$absolute-color;
+  animation-delay:1.5s;
+  margin-top:1.3333rem;
+  margin-left:0;
+
+  & li{
+    display:inline-block;
+    padding:ms(-3);
+    margin:ms(-4);
+    background-color:$sub-text;
+    border-radius:ms(-3);
+  }
+
+}
+
+// Mother 4 Game specific
+.m4g {
+  &:before {
+    background: rgb(0, 0, 0);
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0.55;
+  }
+
+  &:after {
+    background-color:$accent-color;
+    background-image: url(//d3eslul21yiiti.cloudfront.net/img/m4-battle-static.gif);
+    background-size: cover;
+    background-position: 50% 50%;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    @include mq(medium){
+      background-image:url(//d3eslul21yiiti.cloudfront.net/img/m4-battle.gif);
+    }
+  }
+
+}
+
+
+// Days for Girls Specific
+.dfg {
+ background-color:$danger-color;
+ background-image:url('//d3eslul21yiiti.cloudfront.net/img/dfg-adjumani-768w.jpg');
+  
+  &.headline-photo{
+    @include mq(medium){
+      background-image:url('//d3eslul21yiiti.cloudfront.net/img/dfg-adjumani-1024w.jpg');
+    }
+    @include mq(large){
+      background-image:url('//d3eslul21yiiti.cloudfront.net/img/dfg-adjumani-1440w.jpg');
+    }
+  }
+
+  .large {
+    font-size:24vw;
+  }
+  
 }
 
 .dfg-wrapper{
@@ -53,11 +125,12 @@
   position:relative;
   max-width:$max-width;
 }
+
 .dfg-wrapper--wide{
   background:$absolute-color;
   margin-top:0;
-  
 }
+
 .dfg-flower{
   max-width: 10rem;
   width:20vmin;
@@ -86,19 +159,79 @@
   }
 }
 
-.tags{
-  width:100%;
-  text-align:center;
-  font-size:ms(-1);
-  color:$absolute-color;
-  animation-delay:1.5s;
-  margin-top:1.3333rem;
-  & li{
-    display:inline-block;
-    padding:ms(-3);
-    margin:ms(-4);
-    background-color:$sub-text;
-    border-radius:ms(-3);
+.codepen{
+  display:none;
+  visibility:hidden;
+  @include mq(medium){
+    display:block;
+  }
+}
 
+.codepen-mobile{
+  display:block;
+  @include mq(medium){
+    display:none;
+    visibility:hidden;
+  }
+}
+
+.brand-colors{
+  margin-bottom:1.333em;
+
+  > *{
+    float:left;
+    margin-right:3%;
+    width:46.5%;
+    border:1px solid $absolute-color;
+    margin-top:0;
+    text-align:center;
+
+    @include mq(medium){
+        float: left;
+        clear: none;
+        text-align:center;
+        width: 22.75%;
+        margin-left: 0%;
+        margin-right: 3%;
+    }
+
+    &:nth-child(3), &:nth-child(4){
+      margin-top:1.333em;
+      @include mq(medium){
+        margin-top:0;
+      }
+    }
+   
+    p{
+      text-transform:uppercase;
+      font-weight:900;
+
+      span{
+        text-transform:none;
+        font-weight:300;
+        display:block;
+      }
+    }
+  }
+
+  .primary{
+    fill:#E51C23;
+  }
+
+  .secondary{
+    fill:#00BFA5;
+  }
+
+  .info{
+    fill:#3F51B5;
+  }
+
+  .alert{
+    fill:#FFEB3B;
+    margin-right:0;
+  }
+  .clearfix{
+    border:none;
+    float:none;
   }
 }
