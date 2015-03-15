@@ -15,6 +15,7 @@ var gulp         = require('gulp'),
     path         = require('path'),
     server       = tinylr();
     rename       = require("gulp-rename");
+    gzip         = require('gulp-gzip');
     
 
 var paths = {
@@ -33,6 +34,10 @@ gulp.task('css', function() {
       } ) )
     .pipe(autoprefixer('last 2 version'))
     .pipe( csso() )
+    .pipe(gzip({ gzipOptions: { level: 9 } }))
+    .pipe(rename(function (path) {
+        path.extname = ""
+    }))
     .pipe( gulp.dest('dist/css/') )
     .pipe(reload({stream:true}));
 });
@@ -51,6 +56,10 @@ gulp.task('js', function() {
          gulp.src('src/js/*.js')
     .pipe( uglify() )
     .pipe( concat('app.min.js'))
+    .pipe(gzip({ gzipOptions: { level: 9 } }))
+    .pipe(rename(function (path) {
+        path.extname = ""
+    }))
     .pipe( gulp.dest('dist/js/'))
     .pipe(reload({stream:true}));
 });
@@ -58,6 +67,10 @@ gulp.task('js', function() {
 gulp.task('templates', function() {
   return gulp.src('src/jade/**/*.jade')
     .pipe(jade({ pretty: false}))
+    .pipe(rename(function (path) {
+        path.extname = ""
+    }))
+    .pipe(gzip({ gzipOptions: { level: 9 } }))
     .pipe(rename(function (path) {
         path.extname = ""
     }))
