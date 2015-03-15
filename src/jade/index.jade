@@ -4,7 +4,7 @@ extends layout/layout.jade
 block content
 
     section.introduction-wrapper.scene_element.scene_element--fadein(role='main')
-      .introduction-text
+      .introduction-text.page-text
         h1.title Hello. My name is Zane.
         h3 User Experience - 
           span.nowrap Product Design
@@ -15,7 +15,7 @@ block content
       .case-study-information
         h2.client Days for Girls
         img.logo(src='//d3eslul21yiiti.cloudfront.net/img/days-for-girls-logo.svg', alt='Days for Girls International')
-        p.intro
+        p.intro.page-text
           | Days for Girls provides girls around the world with sustainable female hygiene and health education. Facing tremendous growth, Days for Girls needed an online experience to match its programs. 
         p.view-case-study
           a.btn.btn-primary(href='case-studies/days-for-girls', onClick="ga('send', 'event', 'Contact', 'Click', 'Days for Girls Case Study', 1);") View Case Study
@@ -24,7 +24,7 @@ block content
       .case-study-information
         h2.client MOTHER 4
         img.logo(src='//d3eslul21yiiti.cloudfront.net/img/m4g-logo.svg', alt='Mother 4 Game')
-        p.intro 
+        p.intro.page-text
           | An indie sequel to the cult-classic video game series, Mother. Developed over two years, the video game is slated for release in summer 2015 to an active, global fan base. 
         p.view-case-study
           a.btn.btn-primary(href='case-studies/mother-4-game', onClick="ga('send', 'event', 'Case Study', 'Click', 'Mother 4 Case Study', 1);") View Case Study

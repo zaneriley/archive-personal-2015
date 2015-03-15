@@ -181,3 +181,15 @@ figure{
   display: block; 
   clear: both !important;
 }
+
+.wf-loading .page-text {
+  visibility: hidden;
+  opacity:0;
+  transition: opacity 400ms ease-in-out;
+}
+
+.wf-active .page-text {
+  visibility: visible;
+  opacity:1;
+  transition: opacity 400ms ease-in-out;
+}

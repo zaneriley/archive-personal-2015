@@ -4,6 +4,7 @@
   @include center(100%);
     @include mq(medium){
         width:431em;
+        padding:0 ms(0);
     }
     @include mq(large){
         width:65em;

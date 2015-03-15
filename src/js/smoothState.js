@@ -624,6 +624,8 @@
                     $('.dfg-flower').on('click', function(){
                         $(this).addClass('opened');
                     });
+                    /*! lazysizes - v0.9.0 - 2015-02-07
+                     Licensed MIT */
                     lazySizes.init();
                 }
             }
