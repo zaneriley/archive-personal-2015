@@ -63,11 +63,11 @@ linters:
 
   LeadingZero:
     enabled: true
-    style: exclude_zero # or 'include_zero'
+    style:  include_zero
 
   NameFormat:
-    enabled: false
-    convention: BEM
+    enabled: true
+    convention: hyphenated_lowercase
 
   PlaceholderInExtend:
     enabled: true
@@ -89,7 +89,7 @@ linters:
     enabled: true
 
   SingleLinePerSelector:
-    enabled: false
+    enabled: true
 
   SpaceAfterComma:
     enabled: true
